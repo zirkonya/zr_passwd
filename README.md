@@ -29,5 +29,5 @@ cargo run --release -- john "[A-Z][a-z][0-9]{8}" -p "secret123"
 
 Set the `RANDOM` environment variable to force a specific compile-time salt:
 ```bash
-RANDOM=0xDEADBEEF cargo build --release
+SALT=0xDEADBEEF cargo build --release
 ```
