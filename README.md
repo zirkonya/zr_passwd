@@ -27,7 +27,7 @@ cargo run --release -- john "[A-Z][a-z][0-9]{8}" -p "secret123"
 
 ## Custom Salt
 
-Set the `RANDOM` environment variable to force a specific compile-time salt:
+Set the `SALT` environment variable to force a specific compile-time salt:
 ```bash
 SALT=0xDEADBEEF cargo build --release
 ```
