@@ -9,25 +9,23 @@ Generate deterministic passwords from a username, passphrase, and regex pattern.
 ## Install
 
 ```bash
-cargo build --release
+cargo install
+```
+
+Set the `SALT` environment variable to force a specific compile-time salt:
+```bash
+SALT=0xDEADBEEF cargo install
 ```
 
 ## Usage
 
 ```bash
-cargo run --release -- <username> <pattern> [-p <passphrase>]
+zr_passwd <username> <pattern> [-p <passphrase>]
 ```
 
 Examples:
-```bash
-cargo run --release -- john "[A-Z][a-z][0-9]{8}"
-cargo run --release -- john "[A-Z][a-z][0-9]{8}" -p "secret123"
-./target/release/zr_passwd john "[A-Z][a-z][0-9]{8}" -p "secret123"
-```
 
-## Custom Salt
-
-Set the `SALT` environment variable to force a specific compile-time salt:
 ```bash
-SALT=0xDEADBEEF cargo build --release
+zr_passwd john "[A-Z][a-z][0-9]{8}"
+zr_passwd john "[A-Z][a-z][0-9]{8}" -p "secret123"
 ```
