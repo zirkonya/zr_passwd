@@ -7,7 +7,7 @@ use clap::Parser;
 use crate::{
     error::ParseError,
     random::Random,
-    regex::{compile, generate_string},
+    regex::{Person, compile, generate_string},
 };
 
 mod error;
